@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { OffreComponent } from './offre/offre.component';
+import { UserComponent } from './user/user.component';
+import { AddOffreComponent } from './offre/AddOffre.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', redirectTo: 'user', pathMatch: 'full'},
+  { path: 'offre', component: OffreComponent },
+  { path: 'addOffre', component: AddOffreComponent },
+  { path: 'updateOffre/:id', component: AddOffreComponent },
+  { path: 'user', component: UserComponent },
+  { path: '**', component: OffreComponent }, 
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
