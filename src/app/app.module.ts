@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './user/user.component';
 import { AddOffreComponent } from './offre/AddOffre.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     OffreComponent,
     UserComponent,
-    AddOffreComponent
+    AddOffreComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
