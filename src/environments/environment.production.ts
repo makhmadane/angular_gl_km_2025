@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
-  apiUrl: 'http:isikm.sn/api',
+  production: true,
+  apiUrl: 'https://809336f517b2.ngrok-free.app/api',
 };
