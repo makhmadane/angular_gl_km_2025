@@ -3,13 +3,15 @@ import { Injectable } from '@angular/core';
 import { Login } from '../models/login';
 import { TokenResponse } from '../models/token-response';
 import { Register } from '../models/register';
+import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  URL = "http://127.0.0.1:8000/api";
+  URL = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +25,7 @@ export class AuthService {
   }
 
   logOut() {
-    return this.http.post(`${this.URL}/logout`, {},{ headers: this.getHeaders() });
+    return this.http.post(`${this.URL}/logout`, {});
   }
 
   saveToken(token: string) {
